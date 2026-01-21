@@ -19,10 +19,22 @@ function displayTasks() {
         }
         const taskText = document.createElement("span");
         taskText.textContent = task.text;
-        // Créer les boutons et les ajouter
+        li.appendChild(taskText);  // ← Ajouter le texte au <li>
+        
+        // Créer les boutons
+        const completeBtn = document.createElement("button");
+        completeBtn.textContent = "✓";
+        completeBtn.onclick = () => completeTask(index);
+        
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "✗";
+        deleteBtn.onclick = () => deleteTask(index);
+        
+        li.appendChild(completeBtn);
+        li.appendChild(deleteBtn);
+        
         taskList.appendChild(li);
     });
-    // À compléter
 }
 
 function addTask(taskText) {
