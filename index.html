@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestionnaire des Tâches</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <h1>Gestionnaire des Tâches</h1>
+        <form id="taskForm">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Entrez une nouvelle tâche..." required>
+                <button type="submit" class="btn-add">Ajouter</button>
+            </div>
+        </form>
+        <div id="message"></div>
+        <ul id="taskList"></ul>
+        <div class="stats">
+            <p>🎯 Total : <span id="totalTasks"></span></p>
+            <p>🏆 Terminées : <span id="completedTasks"></span></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
-
-<form id="taskForm">
-    <div class="input-group">
-        <input type="text" id="taskInput" placeholder="Entrez une nouvelle tâche..." required>
-        <button type="submit">Ajouter</button>
-    </div>
-</form>
-
-<div id="message"></div>
-<ul id="taskList"></ul>
-<div class="stats">
-    <p>🎯 Total : <span id="totalTasks">0</span></p>
-    <p>🏆 Terminées : <span id="completedTasks">0</span></p>
-</div>
-
 </html>

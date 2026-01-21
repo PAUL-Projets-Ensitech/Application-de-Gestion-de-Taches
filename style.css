@@ -38,15 +38,63 @@ body {
 
 button {
     padding: 12px 24px;
-    background-color: #DECA48;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.6s ease-in-out;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-button:hover {
+.btn-add {
+    background-color: #DECA48;
+}
+
+.btn-add:hover {
     background-color: #C7B540;
-    transition: all 0.5s ease-in-out;
+}
+
+ul {
+    /* list-style: none; */
+    margin-bottom: 20px;
+}
+
+li {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed span {
+    text-decoration: line-through;
+}
+
+.task-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.btn-complete {
+    background-color: #4CAF50;
+}
+.btn-complete:hover {
+    background-color: #38763B;
+}
+
+.btn-delete {
+    background-color: #f44336;
+}
+.btn-delete:hover {
+    background-color: #AB1106;
+}
+
+.stats {
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
 }
