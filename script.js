@@ -26,21 +26,19 @@ function displayTasks() {
 }
 
 function addTask(taskText) {
-    function addTask(taskText) {
-        if (taskText.trim() === "") {
-            // Afficher un message d erreur
-            return;
-        }
-        const task = {
-            id: Date.now(),
-            text: taskText.trim(),
-            completed: false
-        };
-        tasks.push(task);
-        saveTasks();
-        displayTasks();
-        // À compléter
+    if (taskText.trim() === "") {
+        // Afficher un message d erreur
+        return;
     }
+    const task = {
+        id: Date.now(),
+        text: taskText.trim(),
+        completed: false
+    };
+    tasks.push(task);
+    saveTasks();
+    displayTasks();
+    // À compléter
 }
 
 function completeTask(index) {

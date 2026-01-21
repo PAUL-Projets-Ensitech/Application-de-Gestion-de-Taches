@@ -1,7 +1,12 @@
-* {
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
 }
 
 body {
@@ -17,7 +22,6 @@ body {
     padding: 30px;
     border-radius: 5px;
 }
-
 
 .input-group {
     display: flex;
